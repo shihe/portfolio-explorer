@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     title: 'Sleeper League Keepers',
     description: 'See final rosters for a sleeper league and rounds they were drafted for determining keeper value quickly',
     image: 'https://picsum.photos/id/4/1200/800',
-    tags: ['React', 'Sleeper API', 'Typescript', 'Tailwind'],
+    tags: ['React', 'Sleeper API', 'Typescript', 'Tailwind', ],
     url: 'https://sleeper-league-keepers.vercel.app/',
     year: '2025'
   },
