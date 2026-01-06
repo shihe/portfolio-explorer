@@ -9,6 +9,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, isActive, onClick }) => {
+  const handleCardClick = () => {
+    if (isActive) {
+      window.open(project.url, '_blank', 'noopener,noreferrer');
+    } else {
+      onClick();
+    }
+  };
+
   const handleViewButtonClick = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent card onClick from firing twice if button is inside
     window.open(project.url, '_blank', 'noopener,noreferrer');
@@ -16,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isActive, onClick })
 
   return (
     <div 
-      onClick={onClick}
+      onClick={handleCardClick}
       className={`
         relative flex-shrink-0 w-[280px] md:w-[400px] h-[450px] md:h-[550px] 
         transition-all duration-500 cursor-pointer overflow-hidden rounded-2xl group
